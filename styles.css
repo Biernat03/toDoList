@@ -4,53 +4,76 @@ html, body
     font-family: 'Roboto Condensed', sans-serif;
     padding: 10px;
     margin: 0;
-    background: rgb(129, 129, 129);
 }
 hr
 {
-    border: 1px solid rgb(255, 222, 75);
+    border: 1px solid rgb(0, 0, 0);
     display: block;
 }
 #top
 {
     height: 100px;
     padding-bottom: 10px;
-}
-#top p
-{
-    cursor: default;
-}
-#top #logo
-{
-    float: left;
     display: flex;
-    align-items: center;
-    height: 100%;
+    justify-content: space-between;
 }
-#top #logoborder
+#top input
 {
-    width: 100px;
-    height: 100px;
-    border: 4px solid rgb(255, 222, 75);
+    background: none;
+    border: none;
+    display: block;
+    width: min-content;
+    max-height: 50px;
+    width: 200px;
 }
-#userlogo
+#top input:focus
+{
+    border: none;
+    outline: none;
+}
+#top #title
+{
+    font-size: 50px;
+    color: rgb(255, 153, 0);
+}
+#top #description
+{
+    font-size: 20px;
+}
+#maininfo span
+{
+    float: right;
+    display: none;
+    font-size: 20px;
+}
+.userlogo
 {
     height: 50px;
     border-radius: 100%;
-    border: 2px solid rgb(255, 222, 75);
+    border: 4px solid rgb(255, 153, 0);
 }
 #top #usermenu
 {
     display: flex;
     justify-content: flex-end;
 }
-#top #user
+.user
 {
-    width: 100px;
-    text-align: center;
+    margin: 0 10px;
 }
-#top #user p
+#top .menubuttons button
 {
-    line-height: 0;
-    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: none;
+    margin: 0 5px;
+    border: 2px solid rgb(0, 0, 0);
+    cursor: pointer;
+}
+#top .menubuttons button:hover
+{
+    color: rgb(255, 153, 0);
+    border-color: rgb(255, 153, 0);
+    transition: .3s;
 }
