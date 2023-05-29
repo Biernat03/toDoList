@@ -23,14 +23,14 @@ editinputs.forEach((editinput) =>
     {
         const editicons = editinput.querySelectorAll("span");
         editicons.forEach(editicon => {
-            editicon.style.display = "block"; 
+            editicon.style.visibility = "visible"; 
         });
     });
     editinput.addEventListener("mouseleave", () =>
     {
         const editicons = editinput.querySelectorAll("span");
         editicons.forEach(editicon => {
-            editicon.style.display = "none"; 
+            editicon.style.visibility = "hidden"; 
         });
     });
 });

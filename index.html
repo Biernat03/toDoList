@@ -11,18 +11,22 @@
             <div class="popupcontainter">
                 <button id="close"><span class="material-symbols-outlined">close</span></button>
                 <p>Add user</p>
-                <input type="text">
+                <input type="email" placeholder="Email">
                 <button class="action">INVITE USER</button>
             </div>
         </div>
         <header id="top">
             <div id="maininfo">
                 <div class="editinput">
-                    <span class="material-symbols-outlined">edit</span>
+                    <div class="edit">
+                        <span class="material-symbols-outlined">edit</span>
+                    </div>
                     <input type="text" id="title" onchange="log()">
                 </div>
                 <div class="editinput">
-                    <span class="material-symbols-outlined">edit</span>
+                    <div class="edit">
+                        <span class="material-symbols-outlined">edit</span>
+                    </div>
                     <input type="text" id="description">
                 </div>
             </div>
@@ -56,7 +60,43 @@
                 <button>NEW</button>
             </div>
             <div id="lists">
-
+                <div class="statebox">
+                    <div class="stateboxbuttonsbox">
+                        <button class="stateboxbutton"><span class="material-symbols-outlined">add</span></button>
+                        <button class="stateboxbutton"><span class="material-symbols-outlined">settings</span></button>
+                        <button class="stateboxbutton"><span class="material-symbols-outlined">delete</span></button>
+                    </div>
+                    <p class="statename">State</p>
+                    <div class="taskbox">
+                        <p class="task" draggable="true">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio magnam.</p>
+                        <p class="task" draggable="true">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                <div class="statebox">
+                    <div class="stateboxbuttonsbox">
+                        <button class="stateboxbutton"><span class="material-symbols-outlined">add</span></button>
+                        <button class="stateboxbutton"><span class="material-symbols-outlined">settings</span></button>
+                        <button class="stateboxbutton"><span class="material-symbols-outlined">delete</span></button>
+                    </div>
+                    <p class="statename">State</p>
+                    <div class="taskbox">
+                        <p class="task" draggable="true">Lorem ipsum dolor sit amet.</p>
+                        <p class="task" draggable="true">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ipsam.</p>
+                        <p class="task" draggable="true">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo tenetur voluptatum rerum?</p>
+                    </div>
+                </div>
+                <div class="statebox">
+                    <div class="stateboxbuttonsbox">
+                        <button class="stateboxbutton"><span class="material-symbols-outlined">add</span></button>
+                        <button class="stateboxbutton"><span class="material-symbols-outlined">settings</span></button>
+                        <button class="stateboxbutton"><span class="material-symbols-outlined">delete</span></button>
+                    </div>
+                    <p class="statename">State</p>
+                    <div class="taskbox">
+                        <p class="task" draggable="true">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, fugiat.</p>
+                        <p class="task" draggable="true">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam doloribus velit provident placeat praesentium itaque quo.</p>
+                    </div>
+                </div>
             </div>
         </section>
         <footer id="bottom">
