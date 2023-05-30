@@ -17,33 +17,11 @@ tasks.forEach(task => {
 });
 
 stateboxes.forEach(statebox => {
-    statebox.addEventListener("dragover", e => {
-        e.preventDefault()
-        const afterElement = getDragAfterElement(statebox, e.clientY)
+    statebox.addEventListener("dragover", () => {
         const task = document.querySelector('.dragging')
-        if (afterElement == null) {
-            statebox.appendChild(task)
-        }
-        else {
-            statebox.insertBefore(task, afterElement)
-        }
+        statebox.appendChild(task)
     })
 })
-
-function getDragAfterElement(statebox, y) {
-    const draggableElements = [...statebox.querySelectorAll('.task:not(.dragging)')]
-
-    return draggableElements.reduce((closest, child) => {
-        const box = child.getBoundingClientRect()
-        const offset = y - box.top - box.height / 2
-        if (offset < 0 && offset > closest.offset) {
-            return { offset: offset, element: child }
-        }
-        else {
-            return closest
-        }
-    }, { offset: Number.NEGATIVE_INFINITY }).element
-}
 
 //adduser button
 adduserbutton.addEventListener("click", () => 
