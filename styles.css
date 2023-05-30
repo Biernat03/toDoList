@@ -101,6 +101,23 @@ input:focus
     justify-content: center;
     width: 100%;
 }
+#main .buttonscontainter .mainbuttons
+{
+    width: 40px;
+    height: 40px;
+    margin: 10px 5px 0 5px;
+    border-radius: 100%;
+    border: solid 2px rgb(0, 0, 0);
+    cursor: pointer;
+    background: none;
+}
+#main .buttonscontainter .mainbuttons:hover
+{
+    color: rgb(255, 153, 0);
+    border-color: rgb(255, 153, 0);
+    transition: .3s;
+}
+
 #main #lists
 {
     width: 100%;
@@ -177,8 +194,8 @@ input:focus
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(1px);
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
     display: none;
 }
 #adduser p
@@ -199,6 +216,7 @@ input:focus
     align-items: center;
     border: 4px solid rgb(255, 153, 0);
     border-radius: 10px;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 1);
 }
 .popupcontainter button
 {
