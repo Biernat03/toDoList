@@ -173,6 +173,12 @@ input:focus
     padding: 5px;
     margin: 5px;
     cursor: move;
+    background: rgb(255, 255, 255);
+    transition: .3s;
+}
+#main .statebox .task.dragging
+{
+    transform: rotate(2deg);
 }
 
 /*popup menus*/
