@@ -7,9 +7,14 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     </head>
     <body>
-        <div id="adduser">
-            <div class="popupcontainter">
-                <button id="close"><span class="material-symbols-outlined">close</span></button>
+        <div id="popupcontainer">
+            <div id="addstate">
+                <button id="addstateclose"><span class="material-symbols-outlined">close</span></button>
+                <input type="text" id="statetitle" placeholder="Title">
+                <button class="action"><span class="material-symbols-outlined" id="donestatebtn">done</span></button>
+            </div>
+            <div id="adduser">
+                <button id="adduserclose"><span class="material-symbols-outlined">close</span></button>
                 <p>Add user</p>
                 <input type="email" placeholder="Email">
                 <button class="action">INVITE USER</button>
@@ -57,7 +62,7 @@
         <hr>
         <section id="main">
             <div class="buttonscontainter">
-                <button class="mainbuttons"><span class="material-symbols-outlined" onClick="stateboxcreate()">add</span></button>
+                <button class="mainbuttons"><span class="material-symbols-outlined" id="addstateboxbtn">add</span></button>
                 <button class="mainbuttons"><span class="material-symbols-outlined">settings</span></button>
             </div>
             <div id="lists">

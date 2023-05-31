@@ -2,9 +2,27 @@ var titleinput = document.getElementById("title")
 var descriptioninput = document.getElementById("description")
 const editinputs = document.querySelectorAll(".editinput")
 const adduserbutton = document.getElementById("adduserbtn")
+const addstatebutton = document.getElementById("addstateboxbtn")
+
+addstatebutton.addEventListener("click", () => 
+{
+    const popupcontainer = document.getElementById("popupcontainer")
+    popupcontainer.style.display = "flex"
+    const exitbutton = document.getElementById("addstateclose")
+    const addbutton = document.getElementById("donestatebtn")
+    addbutton.addEventListener("click", () =>
+    {
+        var title = document.getElementById("statetitle").value
+        stateboxcreate(title)
+    })
+    exitbutton.addEventListener("click", () =>
+    {
+        popupcontainer.style.display = "none"
+    })
+})
 
 //statebox create
-async function stateboxcreate()
+function stateboxcreate(statenametext)
 {
     const statebox = document.createElement("div")
     statebox.classList.add("statebox")
@@ -32,7 +50,7 @@ async function stateboxcreate()
                     //creating statename title
                     const statename = document.createElement("p")
                     statename.classList.add("statename");
-                    statename.innerHTML = "State";
+                    statename.innerHTML = statenametext;
     //rendering all
     document.getElementById("lists").appendChild(statebox)
         statebox.appendChild(stateboxbuttonsbox)
@@ -82,12 +100,15 @@ stateboxes.forEach(statebox => {
 //adduser button
 adduserbutton.addEventListener("click", () => 
 {
-    const addusercontainter = document.getElementById("adduser");
-    addusercontainter.style.display = "flex"
-    const exitbutton = document.getElementById("close")
+    const popupcontainer = document.getElementById("popupcontainer")
+    const adduser = document.getElementById("adduser")
+    popupcontainer.style.display = "flex"
+    adduser.style.display = "grid"
+    const exitbutton = document.getElementById("adduserclose")
     exitbutton.addEventListener("click", () =>
     {
-        addusercontainter.style.display = "none"
+        popupcontainer.style.display = "none"
+        adduser.style.display = "none"
     })
 })
 
